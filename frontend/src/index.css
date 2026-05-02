@@ -733,6 +733,8 @@ input[type="checkbox"] {
         -webkit-overflow-scrolling: touch;
         overflow-x: auto;
         overflow-y: auto;
+        scrollbar-color: var(--border-2) transparent;
+        background: var(--surface-2);
     }
 
     .queries-table {
@@ -832,18 +834,40 @@ input[type="checkbox"] {
 
     .page-footer {
         padding: 10px 12px;
+        gap: 6px;
     }
 
     .page-title h1 {
         font-size: 15px;
     }
 
-    .pagination
-        .page-btn:not(.page-btn--active):not(:first-child):not(:last-child) {
-        display: none;
+    .pagination {
+        gap: 2px;
     }
 
-    .pagination .page-btn--active {
-        display: inline-flex;
+    .page-btn {
+        min-width: 26px;
+        height: 26px;
+        font-size: 10px;
+        padding: 0 4px;
+    }
+
+    .page-ellipsis {
+        padding: 0 2px;
+        font-size: 10px;
+    }
+
+    .page-size-selector {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .page-size-selector select {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    .pagination-info {
+        font-size: 10px;
     }
 }
