@@ -701,3 +701,146 @@ input[type="checkbox"] {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--text-3);
 }
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .toolbar {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .toolbar .btn {
+        flex: 1 1 auto;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    .page-title h1 {
+        font-size: 17px;
+    }
+
+    .table-container {
+        overflow: hidden;
+    }
+
+    .table-wrapper {
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .queries-table {
+        table-layout: auto;
+        min-width: 680px;
+    }
+
+    .queries-table th,
+    .queries-table td {
+        padding: 8px 10px;
+    }
+
+    .queries-table th {
+        font-size: 9px;
+        letter-spacing: 0.8px;
+    }
+
+    .cell-name {
+        max-width: 140px;
+        font-size: 11px;
+    }
+
+    .cell-owner {
+        max-width: 100px;
+        font-size: 11px;
+    }
+
+    .cell-mono {
+        font-size: 11px;
+    }
+
+    .badge {
+        font-size: 9px;
+        padding: 2px 7px;
+    }
+
+    .btn-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .col-check {
+        width: 36px;
+    }
+
+    .col-actions {
+        width: 72px;
+    }
+
+    .page-footer {
+        flex-wrap: wrap;
+        padding: 10px 16px;
+        gap: 10px;
+    }
+
+    .pagination-info {
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-size-selector {
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .pagination {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .page-btn {
+        min-width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .modal {
+        max-width: calc(100vw - 32px);
+        margin: 0 16px;
+    }
+
+    .confirm-box {
+        max-width: calc(100vw - 32px);
+        margin: 0 16px;
+        padding: 18px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 12px 12px;
+    }
+
+    .page-footer {
+        padding: 10px 12px;
+    }
+
+    .page-title h1 {
+        font-size: 15px;
+    }
+
+    .pagination
+        .page-btn:not(.page-btn--active):not(:first-child):not(:last-child) {
+        display: none;
+    }
+
+    .pagination .page-btn--active {
+        display: inline-flex;
+    }
+}
