@@ -485,7 +485,7 @@ body,
 input[type="checkbox"] {
     width: 15px;
     height: 15px;
-    accent-color: #ffffff;
+    accent-color: #c46a74;
     cursor: pointer;
 }
 
@@ -758,6 +758,9 @@ input[type="checkbox"] {
     .cell-owner {
         max-width: 100px;
         font-size: 11px;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     .cell-mono {
