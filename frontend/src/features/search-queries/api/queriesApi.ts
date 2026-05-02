@@ -1,4 +1,5 @@
-const BASE = "http://localhost:8000/api";
+// const BASE = "http://localhost:8000/api";
+const BASE = import.meta.env.VITE_API_URL;
 
 const headers: HeadersInit = {
   "Content-Type": "application/json",
@@ -10,7 +11,6 @@ const json = async <T>(r: Response): Promise<T> => {
   }
   return r.status === 204 ? (null as T) : r.json();
 };
-
 
 export interface Query {
   id: number;
@@ -56,9 +56,7 @@ export const fetchQueries = ({
   );
 };
 
-export const createQuery = (
-  data: CreateQueryPayload,
-): Promise<Query> => {
+export const createQuery = (data: CreateQueryPayload): Promise<Query> => {
   return fetch(`${BASE}/queries`, {
     method: "POST",
     headers,
@@ -83,9 +81,7 @@ export const deleteQuery = (id: number): Promise<null> => {
   }).then((r) => json<null>(r));
 };
 
-export const bulkDeleteQueries = (
-  ids: number[],
-): Promise<null> => {
+export const bulkDeleteQueries = (ids: number[]): Promise<null> => {
   return fetch(`${BASE}/queries`, {
     method: "DELETE",
     headers,
